@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Piano</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            flex-flow: column nowrap;
+            
+            background-color: black;
+            user-select: none;
+            touch-action: manipulation;
+        }
+
+        .top, .bot {
+            width: 100vw;
+
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .top {
+            height: 40vh;
+            background-color: transparent;
+            justify-content: center;
+        }
+
+        .bot {
+            position: absolute;
+            height: 100vh;
+            background-color: transparent;
+        }
+
+        .key {
+            margin: 0;
+            width: calc(97vw / 7);
+            height: 100vh;
+
+            background-color: white;
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .semikey {
+            background-color: black;
+            color: white;
+            margin: 0;
+            width: calc(97vw / 7);
+            height: 60vh;
+            z-index: 10;
+
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .key-separator {
+            margin: 0;
+            width: calc(3vw / 6);
+            height: 60vh;
+
+            background-color: black;
+        }
+
+        .semikey-separator-complete {
+            margin: 0;
+            width: calc(97vw / 7);
+            height: 40vw;
+        }
+
+        .semikey-separator {
+            margin: 0;
+            width: calc(3vw / 6);
+            height: 40vh;
+
+            background-color: black;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js" integrity="sha512-oFOCo2/3DtjrJG4N27BjSLQWoiBv171sK6a+JiWjp/7agxC2nCUP358AqzxkBUb5jX8g6CYLPdSKQTbC0weCwA==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="top">
+        <div class="semikey" id="1">Do#<br>Reb</div>
+        <div class="semikey-separator"></div>
+        <div class="semikey" id="3">Re#<br>Mib</div>
+        <div class="semikey-separator"></div>
+        <div class="semikey-separator-complete"></div>
+        <div class="semikey-separator"></div>
+        <div class="semikey" id="6">Fa#<br>Solb</div>
+        <div class="semikey-separator"></div>
+        <div class="semikey" id="8">Sol#<br>Lab</div>
+        <div class="semikey-separator"></div>
+        <div class="semikey" id="10">La#<br>Sib</div>
+    </div>
+    <div class="bot">
+        <div class="key" id="0">Do</div>
+        <div class="key-separator"></div>
+        <div class="key" id="2">Re</div>
+        <div class="key-separator"></div>
+        <div class="key" id="4">Mi</div>
+        <div class="key-separator"></div>
+        <div class="key" id="5">Fa</div>
+        <div class="key-separator"></div>
+        <div class="key" id="7">Sol</div>
+        <div class="key-separator"></div>
+        <div class="key" id="9">La</div>
+        <div class="key-separator"></div>
+        <div class="key" id="11">Si</div>
+    </div>
+    <script src="piano.js"></script>
+</body>
+</html>

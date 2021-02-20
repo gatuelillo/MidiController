@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>MIDI</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-template-areas:
+                ". . . ."
+                ". . . ."
+                ". . . ."
+                ". . . .";
+
+            user-select: none;
+        }
+
+        div, div:hover, div:active, div:focus {
+            margin: 0;
+            padding: 0;
+            outline: none;
+
+            border: 1px solid black;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div {
+            background-color: #303030;
+            color: #dddddd;
+            touch-action: manipulation;
+        }
+		
+		.btn {
+			background-color: #454545;
+		}
+    </style>
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js" integrity="sha512-oFOCo2/3DtjrJG4N27BjSLQWoiBv171sK6a+JiWjp/7agxC2nCUP358AqzxkBUb5jX8g6CYLPdSKQTbC0weCwA==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div id="cm">Change mode</div>
+    <div id="currentMode">Launchpad</div>
+    <div></div>
+    <div id="piano">Open piano</div>
+    <script src="index.js"></script>
+</body>
+</html>

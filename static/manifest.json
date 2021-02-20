@@ -1,0 +1,10 @@
+{
+    "name": "MIDI Controller",
+    "short_name": "Launchpad",
+    "theme_color": "#303030",
+    "background_color": "#000000",
+    "display": "fullscreen",
+    "orientation": "landscape",
+    "scope": "/",
+    "start_url": "/"
+  }
