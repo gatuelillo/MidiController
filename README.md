@@ -1,6 +1,6 @@
 # MIDI Controller
 
-MIDI Controller is, as his name says, a midi controller for Android to control a virtual synth (like [LMMS](https://lmms.io) Instrument). Has been designed to keep things simple. Is a PWA but only for letting the app run in full screen.
+MIDI Controller is, as his name says, a midi controller (launchpad and piano) for Android to control a virtual synth (like [LMMS](https://lmms.io) Instrument). Has been designed to keep things simple. Is a PWA but only for letting the app run in full screen.
 
 This should works in Windows and Linux, but has not been tested in Linux.
 
