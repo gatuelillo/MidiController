@@ -44,3 +44,7 @@ The app uses touch events, so it does not work in computer navigators. Just go y
 Congrats. Your app is ready to run.
 
 Configure your favourite synth to the port created previously and enjoy.
+
+## Screenshots
+
+![launchpad](readme_img/launchpad.png) ![piano](readme_img/piano.png)
